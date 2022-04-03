@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events in Jquery</title>
+	<link rel="stylesheet" type="text/css" href="events.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Events in Jquery</h1>
+<div class="para">
+	<h1>Events</h1>
+	<h2>Indian Premier League</h2>
+	<p>Fans are eagerly waiting for the IPL 2021 but ahead of that, all eyes are on IPL Auction 2021. </p>
+	<p>Earlier it was being reported that there will be a full-fledged auction for IPL 14, </p>
+	<p> but it has now been confirmed that BCCI will conduct only mini auctions,</p>
+	<p>mega-auctions as two new teams will be added in the 15th season of IPL. </p>
+	<p>Fans are eagerly waiting for the IPL 2021 but ahead of that, all eyes are on IPL Auction 2021. </p>
+	<!--<h5>The Indian Premier League is a professional Twenty20 cricket league in India usually contested between March and May of every year by eight teams representing eight different cities or states in India. The league was founded by the Board of Control for Cricket in India in 2007</h5>-->
+	<div class="para2">
+		<form>
+		
+		Name:<br><input type="text" name=""placeholder="enter your name" ><br>
+        Email:<br><input type="text" name=""placeholder="enter your email" ><br><br><br>
+        <input type="button" value="click" id="btn">
+	    </form>
+    </div>
+	
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$('input[type="button"]').click(function(){
+         $("p").toggle(3000);
+          });
+
+         $("#btn").click(function(){
+         	$("p").css('background-color','blue');
+        });
+
+         $("h1").mouseenter(function(){
+         	$("h1").css('color','red');
+         });
+
+         //$("h1").mouseenter(function(){
+         	//$("h1").hide();
+         //});
+
+         $("h2").hover(function(){
+         	$("h2").css('color','blue');},
+         	function(){
+              $("h2").css('color','red');
+          });
+         
+         $('input[type="text"]').keypress(function(){
+         	$(this).css('font-size','30px');
+         });
+
+        $('input[type="text"]').focus(function(){
+         	$('input[type="text"]').css('background-color','aqua');
+         }); 
+
+        $('input[type="text"]').change(function(){
+        	$('input[type="text"]').css('background-color','gray');
+        });
+
+         $("window").resize(function(){
+        	$("window").css('background-color','gray');
+        });
+
+
+
+     });
+	
+</script>
+
+</body>
+</html>

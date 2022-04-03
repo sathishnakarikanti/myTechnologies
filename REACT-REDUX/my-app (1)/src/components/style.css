@@ -1,0 +1,101 @@
+.title {
+	padding: 100;
+	margin: 10;
+	color: teal;
+	border-bottom: 2px solid gray;
+	text-align: center;
+}
+.item {
+	padding: 10px;
+	margin: 10px;
+	background: teal;
+	color: white;
+	border: 2px solid lightgray;
+	border-radius: 5px;
+	width: 300px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+button {
+	width: 100px;
+	background: white;
+	border: 0;
+	padding: 10px;
+	border-radius: 100px;
+	outline: none;
+	cursor: pointer;
+}
+button:hover {
+	background: tomato;
+	color: white;
+}
+.items{
+	text-align: center;
+	display:flex;
+	justify-content: center;
+}
+
+
+
+
+.form{
+	border:2px solid #D09B52;
+  padding:40px 10px 0px 40px;
+  width:70%;
+  max-width:700px;
+  border-radius:20px;
+}
+
+.sm-index .personalView .form-group label{
+	display: block;
+    font-size: 13px;
+    color: #757474;
+    font-weight: 500;
+    font-family: 'Roboto';
+	margin: 0px;
+}
+ .form-group label{
+	font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+}
+ .form-group label{
+	font-size: 12px;
+}
+.form-group .inputText{
+	height: 38px;
+	font-size: 12px;
+}
+.form-group {
+	top: 28px;
+	font-size: 16px;
+}
+ .form-group{
+	font-size: 13px;
+}
+.form-group {
+    border-color: #ff8282 !important;
+    background: #ffe4e4;
+    /* background-image: url(/assets/images/validation_icon.svg); */
+    background-repeat: no-repeat;
+    background-size: 23px;
+    background-position: 97% 3px;
+    padding-right: 45px;
+}
+.form-group{
+    background: #fff3cd;
+    /* background-image: url(/assets/images/warningvalidation_icon.svg); */
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;
+    padding-right: 45px;
+}
+
+
+
+		
+		

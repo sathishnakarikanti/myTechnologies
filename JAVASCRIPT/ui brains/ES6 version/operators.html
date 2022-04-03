@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>operators in javascript</title>
+</head>
+<body>
+<script>
+//Arthematic operators(+,-,*,/,%)
+let num1=103;
+let num2=200;
+let sum=num1+num2;
+console.log(`sum:${sum}`);	
+console.log(`${num1+num2}`);
+if(num1%2==0){
+	console.log(`${num1} is even`);
+}
+else{
+console.log(`${num1} is odd`);
+}
+
+//short hand math operator(-=,+=,*=,%=,/+)
+num1=100;
+num2=200;
+let num3=300;
+let add=num3+(num1+num2);
+add +=(num1+num2);
+add -=add;
+console.log(`${add}`);
+
+
+//conditional operators(===,>=,<=,!==,)
+let marks2=35;
+if(marks2!==35){
+	console.log(`candidate is cleared`);
+}
+else{
+	console.log(`condidate is not cleared`);
+}
+
+//Assginment operatiors(=)
+a=10;
+b=300;
+console.log(`${a}`);
+
+//unary operator(++=,--=,=++,=--)
+a=300;
+a--;
+console.log(`${a}`);
+
+//logical operator(&&,||,^)
+let inRelation=true;
+let parentsAgreed=false;
+if(inRelation || parentsAgreed){
+	console.log('get married soon');
+}
+else{
+	console.log('wait until the parrents accepted');
+}
+
+
+//Terinory operator( (condition)?true stmt:false stmt   )
+marks=65;
+let message='';
+(marks>=75)? message='Qualified': message='Not Qualified';
+console.log(`${message}`);
+
+let marks1=76;
+console.log(marks1>=75?"QUALIFIED":"NOT QUALIFIED");
+
+//Equality operator(==,=== )
+c=100;
+d='100';  //string
+if(c==d){  //it does type conversion after checks the condition
+	console.log(`Equal`);
+}
+else{
+	console.log(`Not Equal`);
+}
+
+
+a=1000;
+b='2000'; //string
+if(a===b){ //it checks the direct condition
+	console.log(`Equal`);
+}
+else{
+	console.log(`Not Equal`);
+}
+
+</script>
+</body>
+</html>

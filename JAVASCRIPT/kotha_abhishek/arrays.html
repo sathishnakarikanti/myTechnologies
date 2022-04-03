@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>arrays in JS</title>
+</head>
+<body>
+<center><h1>Arrays in JS</h1>
+<script>
+
+var students=["sathish","saha","karthik"];   
+for(i=0; i<students.length; i++){
+document.write(students[i]+"</br>");
+}
+
+var stu=new Array();               /*Array Literal*/
+var i=0;
+stu[0]="saha";
+stu[1]="hari";
+stu[2]="hamk";
+stu[3]="red";
+
+while(i<stu.length){               /*Array directly*/
+	document.write(stu[i]+"</br>");
+	i++;
+
+}
+
+
+var emp=new Array( "saha","saha","saha");       /*Array Construcor*/
+for(i=0;i<emp.length;i++){
+	document.write(emp[i]+"</br>")
+}
+</script>
+</center>
+</body>
+</html>

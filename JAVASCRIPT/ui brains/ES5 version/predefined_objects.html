@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>predefined objects</title>
+</head>
+<body>
+	<script>
+//predefined objects in JS 
+//1.Math Object(these are for some mathematical operations).
+//2.Date Object(these are for some date related functions).
+//3.Number Object (number specific operations).
+//4.String Object( it is for string functions).
+//5.JSON
+  
+  //Math object
+  //squaroote(sqrt)
+  let num1=34; //method 1
+  console.log(Math.sqrt(num1));
+
+  let num2=16;
+  console.log(Math.sqrt(num2));
+
+  let sqrt=Math.sqrt(25);//method 2
+  console.log(sqrt);
+
+  let sqrt1=Math.sqrt(85);
+  console.log(sqrt1);
+
+  //power(pow)
+  let num3=Math.pow(4,2);
+  console.log(num3);
+
+  //printing the minimum value from a group(min).
+  let num4=Math.min(values=1,2,3,7,4,2,1,-1,-12,0,7,8,4);
+  console.log(num4);
+
+  let num5=(values=3,5,4,7,2,3,5,6,7,-1,-32);
+  console.log(num5);
+
+  //printing the maximum values from agroup(max).
+  let num6=Math.max(values=122,333,111,555,-333,-55);
+  console.log(num6);
+
+  let num7=(values=122,333,111,555,-333,-55,3232,543535);
+  console.log(num7);
+
+  //Random Object
+  //preinting some random value
+  let num8=Math.random();
+  console.log(num8);
+
+  
+  let num9=Math.round(x=Math.random()*10000);//this out put for random value to modified as round.
+  console.log(num9);
+
+  //slice
+  //prints from given first index to given last index
+  let num13=Math.abs(-12);
+  console.log(num13); 
+
+//floor (it prints decimal left side digit only)
+  let num14=Math.floor(1.23);
+  console.log(num14);
+
+ //floor (it prints decimal right side digit only) quite opposite to floor
+  let num15=Math.ceil(1.23);
+  console.log(num15);
+
+//It prints rounded numbers.
+  let num16=Math.round(4.55)
+  console.log(num16);
+
+
+ //date objects in JS
+ //date object(new Date)
+ let date=new Date();
+ console.log(date);
+
+ /*/proper date
+  let currentDate=new Date().toLocalDateString();
+  console.log(currentDate);
+
+  //proper time
+  let currentTime=new Date().toLocalTimeString();
+  console.log(currentTime);
+
+ //USA or other countries time
+ let options={timeone:'America/new-york'};
+ let usaDate=new Date().toLocalTimeString(locales:'en-us',options);
+ console.log(usaDate);*/
+
+
+
+//Number Object in JS
+//this numers are uses for numerical operations
+//max number
+console.log(Number.MIN_SAFE_INTEGER);
+//min number
+console.log(Number.MAX_SAFE_INTEGER);
+//positive infinity
+console.log(Number.POSITIVE_INFINITY);
+//Negative Infinity
+console.log(Number.NEGATIVE_INFINITY);
+//conversions
+//string to number =>parseInt
+
+//parseInt
+let str1='100';
+let num10=Number.parseInt(str1);
+console.log(`${typeof str1} => ${typeof num10}`);
+
+//parseFloat
+let str2='30.5';
+let num11=Number.parseFloat(str2);
+console.log(`${typeof str2} => ${typeof num11}`);
+
+//Number can be converted into string
+//toString
+let num12=100;
+let numString=num12.toString();
+console.log(`${typeof num12} => ${typeof numString}`);
+
+//toFixed (it si commonly useful for the fixing the amount).
+//toFixed
+let amount=1000;
+console.log(amount.toFixed(fractionDigits=2));
+
+//strings
+//It is for string Related operations
+let msg=('good morning');
+console.log(msg.length);
+console.log(msg.charAt(3));
+console.log(msg.charCodeAt(3));
+console.log(msg.toLowerCase());
+console.log(msg.toUpperCase());
+console.log(msg.substr(from=0,length=5));
+console.log(msg.substr(from=5));
+console.log(msg.slice(1,8));
+console.log(msg.indexOf('good'));
+
+
+//JSON object
+//it is used to convert string to object and object to string
+//string=>object:  parse()
+//object=>string:  stringify()
+
+//creating a object
+let student={
+	name:'rajan',
+	age:21,
+	course:'CSE',
+	college:'IIT delhi'
+}
+console.log(student);
+
+//object to string(stringfy)
+let student1=JSON.stringify(student);
+console.log(student1);
+
+//string to object(parse)
+let student2=JSON.parse(student);
+console.log(student2);
+</script>
+</body>
+</html>

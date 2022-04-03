@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	let numbers=[10,20,30,40,50]
+	console.log(numbers);
+	console.log(numbers[0]);
+	console.log(numbers[1]);
+	console.log(numbers[5])//undefined
+
+
+ console.log('Printing array Using normal for loop');
+ let result='';
+	for(i=0;i<=numbers.length-1;i++){//normal for loop
+		result +=`${numbers[i]}  `;
+		
+	}
+	console.log(result);
+
+
+	
+    
+	let colors=['red','black','green','pink','orange','suffron','gray','blue','white'];//taking a new object with values
+
+	
+	//normal for loop
+	console.log('printing the colors using the normal for loop');
+	for(i=0;i<=numbers.length-1;i++){
+	
+		console.log(colors[i]); //printing the values
+	}
+
+
+
+    //normal for loop with ES6 futures
+	console.log('printing the colors using the normal for loop with ES6 features');
+	 result='';
+     colors=['red','black','green','pink','orange','suffron','gray','blue','white'];
+    for(i=0;i<=numbers.length-1;i++){
+       result +=`${colors[i]} `;
+   }
+   console.log(result);
+
+   // normal for in loop   (ES5 version)
+   console.log('printing the colors using for in loop (ES5 version)');
+   for(let a in colors){
+	   console.log(a); //this is prints only index
+   }
+
+  
+   //ES5 version
+   console.log('printing the colors using for in loop (ES5 version) with ES6 versions');
+   result='';
+   for(let index in colors){
+   	
+   	result +=`${colors[index]} `;// this is prints index values
+   }
+   console.log(result);
+
+
+   //for in  loop to for of loop ( ES6 version)
+   //for of loop
+   console.log('printing the colors using for of loop (ES6 version)');
+   for( let a of colors){
+    console.log(a);
+   }
+
+   console.log('printing the colors using for of loop (ES6 version) with ES6 features');
+   result='';
+   for(let color of colors){
+   	result += `${color} `;
+   }
+   console.log(result);
+ 
+ 
+console.log('printing the numbers using for of loop (ES6 version) with ES6 features');
+ result='';
+ for(let b of numbers){
+ 	result += `${b} `;
+ }
+ console.log(result);
+
+
+//for each function
+console.log('printing the colors using forEach loop (ES5 version) with ES6 features');
+ let mom ='';
+ colors.forEach(function(color){
+ 	mom +=`${color}  `;
+ });
+ 	console.log(mom);
+ 
+
+
+ let dad='';
+ numbers.forEach(function(num){
+ 	dad +=`${num} `;
+});
+ 	console.log(dad);
+ 
+
+
+//for each with arrow function
+result='';
+colors.forEach( color => result +=   `${color} `);//printing colors
+console.log(result);
+
+
+result='';
+numbers.forEach(num => result += `${num} `); //printing numbers
+console.log('numbers are:'+result);
+
+</script>
+</body>
+</html>

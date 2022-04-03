@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>delay method in Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="row">
+	<div class="col-sm-">
+	<div class="div1" style="background-color: yellow; width: 100px; height: 100px;"></div></br>
+    <div class="div2" style="background-color: red; width: 100px; height: 100px; " ></div></br></br>
+	<div class="div3" style="background-color: green; width: 100px;height: 100px;"></div></br>
+	<div class="div3" style="background-color: green; width: 100px;height: 100px;"></div></br>
+	<div class="div3" style="background-color: green; width: 100px;height: 100px; margin-left: 150px; margin-bottom: 100px"></div>
+	<div class="div3" style="background-color: green; width: 100px;height: 100px;"></div>
+	<div class="div3" style="background-color: green; width: 100px;height: 100px;"></div>
+
+<button>button</button>
+ 
+ <script type="text/javascript">
+	
+	$(document).ready(function(){
+		$("button").click(function(){
+			$(".div1").delay(7000).slideUp();
+			$(".div2").delay(5000).slideUp();
+			$(".div3").delay(3000).slideUp();
+		});	
+	});
+</script>
+
+</body>
+</html>

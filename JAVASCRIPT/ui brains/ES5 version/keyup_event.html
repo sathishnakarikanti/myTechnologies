@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form>
+<input type="text" name="" id="username">	
+<h2 id="msg"></h2>
+</form>
+<script>
+	let textBox=document.querySelector(selector='#username');
+	textBox.addEventListener(type='keyup',listener = function(){
+		let textEntered=textBox.value;
+		let messageElement=document.querySelector(selector='#msg');
+		messageElement.innerText=textEntered;
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>date validation in js</title>
+</head>
+<body style="text-align: center;">
+<h1>Date validation in JS</h1>
+<form name="myform" action="new_page1.html" onsubmit=" return validDate()" method="post">
+	Enter date of birth<input type="DOB" name="date1" placeholder="Enter your client DOB"></br>
+	<input type="submit" value="validate">
+</form>
+<script type="text/javascript">
+	function validDate(){
+        let  curDate= new Date();
+		let date2= new Date(document.myform.date1.value);
+		if(date2>curDate){
+			alert("your entered wrong date");
+			return false;
+		}
+	}
+	
+</script>
+</body>
+</html>

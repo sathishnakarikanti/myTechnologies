@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <body>
+
+            <script>
+            //subclasses or inheritance concept
+            console.log('sub classes or inheritance concept');
+            class Person {
+                constructor (fisrtName,lastName){
+                    this.fisrtName = fisrtName;
+                    this.lastName = lastName;
+                }
+
+                getFirstName(){
+                    return this.fisrtName;
+                }
+
+                getLastName(){
+                    return this.lastName;
+                }
+
+                greet(){
+                    let msg = `Welcome MR:${this.fisrtName} ${this.lastName}`;
+                    console.log(msg);
+                }
+
+
+
+            }
+            let person = new Person('sathish','nakarikanti');
+            person.greet();
+
+
+            class Employee extends Person {
+                constructor(firstName,lastName,age,designation){
+                    super(firstName,lastName);
+                    this.age = age;
+                    this.designation = designation;
+                }
+                getAge(){
+                    return this.age;
+                }
+                getDesignation(){
+                    return this.designation;
+                }
+                greet(){
+                     let msg = `hello Mr:${this.fisrtName} ${this.lastName} Your at:${this.age} and your woking as ${this.designation} `;
+                     console.log(msg);
+                }
+            }
+             let employee = new Employee('saha','nakarikanti','23','developer');
+             employee.greet();
+
+             class Employee1 extends Person{
+                 constructor(firstName,lastName,age, designation,location){
+                     super(firstName,lastName);
+                     this.age=age;
+                     this.designation=designation;
+                     this.location=location;
+                     }
+                     getAge(){
+                         return this.age;
+                     }
+                     getDesignation(){
+                         return this.designation;
+                     }
+                     getLocation(){
+                         return this.location;
+                     }
+                     greet(){
+                        let msg = `hello Mr:${this.fisrtName} ${this.lastName} Your at:${this.age} and your woking as ${this.designation} at ${this.location} `;
+                       console.log(msg);      
+                    }
+                }
+                    let employee1 = new Employee1('saha','nakarikanti','23','developer','hyderabad');
+                    employee1.greet();
+                     
+             
+
+            </script>
+            </body>
+        </head>
+    </html>

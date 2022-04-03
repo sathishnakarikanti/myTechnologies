@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>arrays in js</title>
+</head>
+<body>
+<script>
+	//array is collection of the similar or homogenious datatypes..
+	//array is collection of objects,strings,numbers,boolean.
+	//array is indexed collection of elements.
+	//it is starts from 0 index.
+	//every object is an array.
+
+	//creation of an object
+	let a=10;
+	let b=20;
+	let c=30;
+
+
+	//syntax: numbers=[];
+	let numbers=[10,20,30];
+	console.log(numbers);
+	console.log(typeof numbers);//10,20,30
+
+	//access the element numbers throw index(position)
+	console.log(numbers[0]);//10
+	console.log(numbers[2]);//30
+
+	//access the non-existing elements
+	console.log(numbers[3]);//undefined
+
+	//iterations of an elements
+	let result=' ';
+	let colors=['white','black','silver','purple','blue','yellow'];
+    
+    //1.normal for loop
+    for(let i=0;i<=colors.length-1;i++){// -1 because the index starts from 0 so -1 gives exactly values
+    	 result += `${colors[i]} `;//it is for single lines
+    }
+    console.log(result);
+
+    //2.for-in loop from ES5 version
+    result=' ';
+    for(let a in colors){      //a
+    	console.log(a);  
+    }
+
+    //2.for-in loop from ES5 version using index
+    result:' ';
+    for(let index in colors ){   //index
+    	result += `${colors [index]}    `;  //space and same line
+    }
+    console.log(result);
+
+    //for-of loop from ES6 version
+    result='';
+    for(let Colors of colors){
+    	result += `${Colors}  `;
+    }
+    console.log(result);
+
+    //4.  for each function upto eS5
+    result='';
+    colors.forEach(function(color){
+    	result += `${color}   ` ;});
+    console.log(result);
+    
+    //5.  for each with Arrow function from ES6
+    result='';
+    colors.forEach(color => result += `${color} `); //this is shortest notation for the array function using the Arrow. 
+    console.log(result);   	
+    
+
+    //Array of objects
+    //we can say collection of objects
+    let employee=[
+    {
+        id:1,
+        name:'sathish',
+        age:'21',
+        designation:'developer',
+        isActive:'true'
+    },
+    {
+       id:2,
+       name:'naresh',
+       age:25,
+       designation:'manager',
+       isActive:'false'
+    },
+    {
+       id:3,
+       name:'rahul',
+       age:28,
+       designation:'sr.manager',
+       isActive:'true'
+    },
+    {
+      id:4,
+       name:'dileep',
+       age:32,
+       designation:'HR',
+       isActive:'false'  
+    },
+    {
+        id:5,
+       name:'madhu',
+       age:33,
+       designation:'sr.HR',
+       isActive:'true'
+    }
+    ]
+
+    //access all employees
+    console.log(employee[0].name);   //op:sathish
+    console.log(employee[1]);        //op:total details
+    console.log(employee[2].id);
+
+    //iterate employees
+    let result1='';
+    for(let employees of employee){
+    result1 += `${employees.name}   `;
+     console.log(employees.name)
+    }
+    console.log(result1);
+
+         //call the employee id's only
+    let result2="";
+    for(let employees of employee){
+        result2 +=` ${employees.id} `;
+    }
+    console.log(result2);
+         
+          //call the designations
+    let result3='';
+    for(let employees of employee){
+        result3 +=` ${employees.designation} `;
+    }
+    console.log(result3);
+
+       //filter senior employees
+       let seniorEmployees=[];
+    for(employees of employee){
+        if(employees.age>=30){
+            seniorEmployees.push(employees.name);
+        }
+    }
+    console.log(seniorEmployees);
+
+      //filter isActive employes
+      let activeEmployees=[];
+      for(employees of employee){
+        if(employees.isActive){
+          activeEmployees.push(employees.name);
+
+        }
+    }
+    console.log(activeEmployees);
+    
+      //filter 
+    let activeEmployees1=[];
+    for(let employees of employee){
+        if(employees.isActive){
+            activeEmployees1.push(employees.name);
+        }
+    }
+    console.log(activeEmployees1);
+
+
+    //
+      
+    
+
+</script>
+</body>
+</html>

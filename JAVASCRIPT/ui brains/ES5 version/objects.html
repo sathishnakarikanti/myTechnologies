@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>variable declaration in JS</title>
+</head>
+<body style="text-align: center">
+<script>
+	let camera={
+		brand:'nikon',
+		price:40000,
+		color:'black',
+		mfg:2020
+	};
+	console.log(camera);
+
+	//accesing the properties
+	console.log(camera.brand);
+	console.log(camera.color);
+	console.log(camera.mfg);
+
+    //accesing the non-existing propert
+    console.log(camera.megapixels);
+
+    //accesing the properties using dot(.) and [] notation
+    console.log(camera.price);//this is for static functions
+    console.log(camera['price']);//this for dynamic functions
+
+
+    //for dynamic properties of dot and,[] notation
+    let prop='mfg';
+    console.log(camera.prof);
+    console.log(camera[prop]);
+
+
+
+//nested object(the object inside the object is called nested object).In it parent and child objects are present.
+
+let student={
+	name:'Arjun reddy',
+	age:20,
+	course:'Engineering',
+	
+	address:{
+		street:'mallikarjun nagar',
+		city:'hyd',
+		state:'Telengana'}
+	};
+
+//access the nested object
+console.log(student);
+console.log(student.address);
+
+//acess the properties of on obect
+console.log(student.address.street);
+
+
+//CRUD operations using CRUD operations we can create,read,update and delete the properties.
+let mobile={ };
+console.log(mobile);
+
+//create an operations
+mobile.brand='Apple';
+mobile.color='silver';
+mobile.price='105000';
+mobile.isInsured='false';
+
+//read operation(access)
+console.log(mobile.brand);
+
+//update operation
+console.log(mobile.price);
+mobile.Price=900000;
+console.log(mobile.Price);
+
+//delete operation
+delete mobile.isInsured;
+console.log(mobile);
+
+let saha={
+          name:'sathish',
+          number:'101',
+          location:'cdr'};
+console.log(saha);
+	
+</script>
+</body>
+</html>

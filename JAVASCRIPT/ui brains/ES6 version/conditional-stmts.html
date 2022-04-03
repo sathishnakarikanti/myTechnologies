@@ -1,0 +1,117 @@
+<html>
+    <head>
+        </head>
+        <body>
+            <script>
+
+                //else if
+
+                //syntax
+                
+                
+                /*
+                if(){
+                    stmt
+                }
+                else if(){
+                    stmt
+                }
+                else if(){
+                    stmt
+                }
+                .....
+                .....
+                .....
+                else{
+                     stmt
+                }
+                */
+
+                let time=23;
+            
+                if(time>=0 && time<12){
+                  console.log("Good Morning");
+                }
+                else if(time>=12 && time<4){
+                    console.log("Good Afternoon");
+                }
+                else if(time>=4 && time<21){
+                    console.log("Good Evening");
+                }
+                else if(time>=22 && time<=24){
+                    console.log("sorry timeout");
+                }
+                else{
+                    console.log("Enter proper time");
+                }
+
+
+
+                // <h2>Slot Bookings</h2>
+                // time=22;
+                // wishMsg='';
+                // if(){
+                     // }
+
+        
+        
+        
+                //switch conition
+                
+                
+                
+                //syntax
+                // variable declaration
+                // switch(variable){
+                //     case 0:
+                //         print stamt;
+                //         break;
+                //         ........
+                //         .........
+                //         .........
+                //         default:
+                //             print stmat;
+                //             break;
+                //          }
+                
+
+
+
+                let day= new Date().getDay();//date object 
+                let today="";
+                    // day=6;
+                switch(day){
+                    case 0:
+                        today='sunday';
+                        break;
+                    case 1:
+                        today='Monday';
+                        break;
+                    case 2:
+                        today='Tuesday';
+                        break;
+                    case 3:
+                        today='wednesday';
+                        break;
+                     case 4:
+                        today='Thursday';
+                        break;
+                    case 5:
+                        today='Friday';
+                        break;
+                    case 6:
+                        today='saturday';
+                        break;
+                    default:
+                        today='enter proper day';
+                        break;
+        
+                }
+                console.log(`today is: ${today}`);
+                
+
+
+    
+                </script>
+            </body>
+    </html>

@@ -1,0 +1,41 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  	<title>Animated methodin Jquery</title>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<style type="text/css">
+  		body{text-align: center;}
+  		p{background-color: yellow;
+  			border:2px solid red;
+  			color: black;
+  			text-align: center;
+  			padding: 5px;
+  			width: 20%;
+  				position: absolute;
+  		}
+  	</style>
+  </head>
+  <h1>Animated Method Jquery</h1>
+  <p style="text-align: center;">Fans are eagerly waiting for the IPL 2021 but ahead of that, all eyes are on IPL Auction 2021. Earlier it was being reported that there will be a full-fledged auction for IPL 14, but it has now been confirmed that BCCI will conduct only mini auctions, while the IPL 2022 will witness mega-auctions as two new teams will be added in the 15th season of IPL.</p></br></br></br></br></br></br></br>
+  <button>animate</button>
+  <body>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+  		$("button").click(function(){
+  			$("p").animate({left:'200px'},1000)
+  			$("p").animate({top:'300px'},1000)
+  			$("p").animate({left:'100px'},1000)
+  			$("p").animate({top:'50px'},1000)
+  			$("p").animate({left:'50px'},1000)
+  			
+  			$("p").animate({fontSize:"2em",opacity:0.5})
+
+
+
+});
+
+  		});
+  
+  </script>
+  </body>
+  </html>

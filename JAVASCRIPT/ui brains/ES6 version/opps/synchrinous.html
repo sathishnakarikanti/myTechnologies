@@ -1,0 +1,62 @@
+<html>
+    <head>
+        </head>
+        <body>
+            <script>
+            console.log('car 1');
+            console.log('car 2');
+            console.log('car 3');
+            console.log('car 4');
+            console.log('car 5');
+
+            console.log('car 1');
+            setTimeout(() => { console.log('car 2');},2000);
+            console.log('car 3');
+            console.log('car 4');
+            console.log('car 5');
+        
+
+            let calculate = (a,b,c) => {
+                let result = '';
+                if(c=='sum'){
+                    result = a+b;
+                }
+                if(c=='mul'){
+                    result = a*b;
+                }
+                return result;
+
+            };
+            let output = calculate(10,30,'mul');
+            console.log(output);
+
+
+            //real time scenario
+            
+            let mul = (a,b) => {
+                return a*b;
+            }
+            
+            let calculate1 = (a,b,callback) => {
+                return callback(a,b);
+            };
+            let output1 = calculate1 (10,20,mul);
+            console.log(output1);
+            
+            
+            let output2 = calculate1 (10,20, (a,b) => {return a+b });
+            console.log(output2);
+            
+            let output3 = calculate1 (10,15,(a,b) => {return a-b});
+            console.log(output3);
+
+
+
+
+
+
+
+            </script>
+            
+            </body>
+    </html>

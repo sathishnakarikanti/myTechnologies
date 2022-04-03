@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>name validation</title>
+</head>
+<body style="text-align: center;">
+<h1>Name validation In JS</h1>
+<form name="myform" onsubmit="return validname()" method="post" action="new_page2.html" >
+	First Name<input type="text" name="name1" placeholder="Enter your first name" pattern="[a-zA-Z ]{3,}" title="name must in Alphabets"></br></br>
+	<input type="submit" value="submit">
+</form>
+<script type="text/javascript">
+	function validname(){
+		let name=document.myform.name1.value;
+		 if(name=="null" || name==""){
+			alert("provide Alphabets only");
+		return false;
+	}
+}
+</script>
+</body>
+</html>

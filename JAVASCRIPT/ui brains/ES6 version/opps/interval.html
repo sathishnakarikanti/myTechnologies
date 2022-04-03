@@ -1,0 +1,44 @@
+<html>
+    <head>
+        </head>
+        <body>
+
+            <script>
+
+                // let msg = () => {
+                //     console.log('setInterval111');
+                
+                // };
+            
+                // setInterval(msg,3000);
+
+               
+               
+                // let count = 0;
+                // let greet = () => {
+                // count++;
+                //     console.log(`setInterval222 ${count}`);
+
+
+                // };
+                // setInterval(greet,1000);
+
+
+                let count = 0;
+                let greet = () => {
+                count++;
+                    console.log(new Date().toLocaleTimeString());
+
+
+                };
+                setInterval(greet,1000)
+                console.log(new Date().toLocaleTimeString());
+                setTimeout(greet,5000);
+
+
+                
+                </script>
+
+
+            </body>
+    </html>

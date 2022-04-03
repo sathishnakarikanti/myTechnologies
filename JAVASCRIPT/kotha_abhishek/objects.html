@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>objects in js</title>
+</head>
+<body>
+<center>
+	<h1>objects in js</h1>
+	<script>
+		
+var stu1={rno:"001",name:"sathish",branch:"CSE"}         /*object literal */
+document.write(stu1.rno+" "+stu1.name+" "+stu1.branch);
+
+		var emp=new Object();
+		emp.id="10";
+		emp.name="saha";
+		emp.salary="11222";
+		document.write(emp.id+" "+emp.name+" "+emp.salary);
+
+function student(rno,name,address,branch){             /*object directly*/
+	this.rno=rno;
+	this.name=name;
+	this.address=address;
+	this.branch=branch;
+
+}
+var stu1=new student("10","saha","cdr","CSE");       /*object constructor*/
+document.write(stu1.rno+" "+stu1.name+" "+stu1.address+" "+stu1.branch );
+
+	</script>
+</center>
+</body>
+</html>

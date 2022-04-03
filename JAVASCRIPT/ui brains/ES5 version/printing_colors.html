@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>colors</title>
+	<style>
+		div{
+			background-color: black;
+			padding: 35px;
+			margin: 25px;
+			color: white;
+			text-align: center;
+		}
+		button{
+			font-size: 35px;
+			padding: 15px;
+			margin: 20px;
+		}
+		h1{
+			font-size: 35px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1 id="msg-1"></h1>
+		<button onclick="fillColorGreen()">Green</button>
+		<button onclick="fillColorRed()">Red</button>
+		<button onclick="fillColorAqua()">blue</button>
+		<button onclick="fillColorOrange()">orange</button>
+	</div>
+	<script>
+	
+	let fillColorGreen= () => {
+	let h1Tag=document.querySelector(selectors='#msg-1');
+    h1Tag.innerText="";
+    h1Tag.style.backgroundColor='Green';
+	h1Tag.style.padding='15px';
+	h1Tag.style.boxShadow='10px 10px 10px black';
+    };
+     
+    let fillColorRed= () => {
+    let h1Tag=document.querySelector(selectors='#msg-1');
+    h1Tag.innerText="";
+    h1Tag.style.backgroundColor='red';
+    h1Tag.style.padding='15px';
+    h1Tag.style.boxShadow='10px 10px 10px black';
+    };
+    let fillColorAqua = () => {
+	let h1Tag=document.querySelector(selectors='#msg-1');
+	h1Tag.innerText="";
+	h1Tag.style.backgroundColor='aqua';
+	h1Tag.style.padding='15px';
+	h1Tag.style.boxShadow='0 0 10px black';
+    };
+
+    let fillColorOrange = () => {
+	let h1Tag=document.querySelector(selectors='#msg-1');
+	h1Tag.innerText="";
+	h1Tag.style.backgroundColor='orange';
+	h1Tag.style.padding='15px';
+	h1Tag.style.boxShadow='0 0 10px black';
+    };
+	
+
+
+	</script>
+
+</body>
+</html>

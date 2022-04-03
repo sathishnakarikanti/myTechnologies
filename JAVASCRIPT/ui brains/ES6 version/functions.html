@@ -1,0 +1,338 @@
+<html>
+<head></head>
+<body>
+    <script>
+
+        //functions are 3 types in js.
+        console.log('functions are 3 types in js.');
+        //1.Normal function
+        //2.function expression
+        //3.Arrow function
+        //function methods are 3 types
+        //1. Isolation function
+        //2. function with parameter and without return type
+        //3. function with parameter and return type
+
+        //1(i).Normal function with isolation
+        console.log('1.Normal function');
+        function printNF1(){
+            result = '';
+            for(i=0;i<=10;i++){
+                result += `${i} `;
+                console.log('Good Morning...!');
+                
+            }
+            console.log(result);
+
+        }
+        printNF1();
+
+
+
+        //2(ii).Normal function with parameter
+        function printNF2(a,b,c){
+            result = '';
+            for(i=a;i<=b;i++){
+                result += `${i} `;
+                
+            }
+            console.log(result);
+
+
+        }
+        printNF2(2,20);
+        printNF2(20,50);
+        printNF2(10,100,10);
+
+
+        function printNF3(a,b,c){
+            result = '';
+            for(i=a;i<=b;i += c){
+                result += `${i} `;
+                
+            }
+            console.log(result);
+
+
+        }
+        printNF3(2,20,2);
+        printNF3(5,50,5);
+        printNF3(10,100,10);
+
+
+        function printNF4(a,b,c){
+            result = '';
+            for(i=a;i<=b;i += c){
+                result += `2X${i}=${2*i} `;
+                
+            }
+            console.log(`is:${result} `);
+
+
+        }
+        printNF4(2,20,2);
+
+
+        function printNF5(a,b){
+            result = '';
+           for (i=0; i<=20; i++){
+               result += `${i}`;
+           }
+                return result;
+        };
+        let output= printNF5(10,20);
+        console.log(`return: ${output}`);
+
+        
+        
+    
+    
+  
+       //2. function Expression
+       //2(I). function expression with isolation function.
+       console.log('Function Expression...!');
+
+       let msg1 = function(){
+           console.log('Good Morning...!');
+       }
+       msg1();
+
+       ///3(ii). function with parameters
+       let msg2 = function(fname,lname){
+           let result = '';
+           result += `${fname},${lname}`;
+           console.log(result);
+           }
+          msg2('sathish','harish');
+
+
+       msg2();
+
+       
+       //2(iii). function with parameters and return type
+       let msg3 = function(fname,lname){
+           result = '';
+           result = ` Hello ${fname} ${lname} Goud`;
+           return result;
+       }
+       let output1= msg3('sathish','nakarikanti');
+       console.log(output1);
+
+
+       
+       
+       
+       
+       //3 Arrow function
+       //3(i). Arrow function with Isolation
+       console.log('an Arrow function');
+       
+      
+       let arroFn1 = () => {
+         console.log("Good Morning....!");
+       };
+       arroFn1();
+       
+       //3(ii). Arrow function with parameters
+       let arroFn2 = (a,b) =>{
+           let result = "";
+           result += 4*(a+b);
+           console.log(result);
+
+       };
+       arroFn2(10,20)
+
+       let arroFn3 = (a,b) => {
+           let result = '';
+           for(i=a;i<=b;i++){
+               result += `${i}  `;
+
+           }
+           console.log(result);
+
+       }
+       arroFn3(11,22);
+
+
+        //3(iii). Arrow function with parameters and return type
+        let arroFn4 = (a,b) => {
+            let result='';
+            for(i=a; i<=b; i++){
+                result += `${i}  `;
+            }
+            return result;
+
+        };
+        let   output4 = arroFn4(10,25); // when we return then we have to create a variable to store the value of function call.
+        console.log(output4);
+
+
+        let arroFn5 = (a,b) => {
+            let result='';
+            result += `hai ${a} ,you are ${b}`;
+            console.log(result);
+
+        };
+        // console.log(result);
+        arroFn5('sathish',23);
+
+
+
+    //function with an object as parameter
+    let printObj = function(obj){
+
+        console.log(obj);
+    }
+    printObj({name:'sathish',age:'23',designation:'employee'});//direct passing the object
+    let mobile={     // declaring an object outside the function
+
+        model:'Redmi-4A',
+        color:'Gold',
+        price:'6k'
+    };
+    printObj(mobile);
+
+
+    //function with an array as parameter
+    let printArray = function (array){
+        console.log(array);
+    }
+    
+    printArray(['10','20','30','40','50']);
+    printArray([10,20,30,40,50]);
+
+    let array1=[11,12,13,14,15];
+    printArray(array1);
+
+    let aColors=['white','red','pink','yellow','black'];
+    printArray(aColors);
+
+    //same as arrow 
+    let printArray1 = (array) => {
+        console.log(array);
+
+    }
+    array = [100,200,300,400]
+    printArray1(array);
+
+
+    let printObj2 = (obj) => {
+        console.log(obj)
+    }
+    obj = {
+        name:'madhavan',
+        age:'23yrs',
+        designation:'fullstack'
+    };
+        console.log(obj);
+
+
+    //functin inside an object
+    let student = {
+     fname:'sathish',
+     lname:'nakarikanti',
+     fullName : function(){
+       return 'sathish nakarikanti';
+     }
+    };
+    console.log(student.fname);
+    console.log(student.fullName());
+
+    // let student2 = {
+    //  fname:'sathish',
+    //  lname:'nakarikanti',
+    //  fullName : function(){
+    //    return `${this.fname} ${this.lname}`;
+    //  }
+    // };
+    // console.log(student2.fname);
+    // console.log(student2.fullName());
+    
+    //same as Arrow
+    let student1 = {
+     fname:'sathish',
+     lname:'nakarikanti',
+     fullName : () => {
+       return 'sathish nakarikanti';
+     }
+    };
+    console.log(student1.fname);
+    console.log(student1.fullName());
+    
+
+    //nested function (function inside the function)
+    let outerFn = (a,b) => {
+         let result = ''; 
+         result = a+b;
+        console.log(result);
+        
+        let innerFn = (d) => {
+            c=result+d
+            console.log(c);
+        }
+        innerFn(10);
+
+    }
+    outerFn(10,20);
+
+    //twested function
+    let twestedFn = () => {
+        let name = 'sathish',
+         printStudent = () => {
+               student ={
+                  name:'satish',
+                  age:23,
+                  department:'CSE'
+               };
+               return student;
+        }
+        return printStudent;
+
+    };
+    let innerFn = twestedFn();
+    let studentObj = innerFn();
+    console.log(studentObj.department);
+
+    //preparing chicken curry usig fuctions
+    let glassBowl = (rawChicken,masala) => {
+        //mixing chicken
+        let marinatedChicken = `MIXING:(${masala}+${rawChicken})`;
+        return marinatedChicken;
+    };
+
+    let cookingBowl = (marinatedChicken,water) => {
+        //cooking chicken
+        let cookedChicken = `MiXING:(${marinatedChicken}+${water})`;
+        return cookedChicken;
+    };
+
+    let eatingPlate = (cookedChicken,rice) => {
+        //eating rice with chicken
+        let eating = `(Eating: ${cookedChicken} + ${rice})`;
+        console.log(eating);
+        
+    };
+    let rawChicken = '1kg chicken';
+    let masala = 'oil,papper,chilli,garlic,salt';
+    let marinatedChicken=glassBowl(rawChicken,masala);
+    
+    let water = '1ltr water';
+    let cookedChicken=cookingBowl(marinatedChicken, water);
+
+    let rice = '2kg rice';
+    let eating=eatingPlate(cookedChicken,rice);
+
+
+
+
+
+      
+
+
+
+       
+
+
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display Efects in Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		h3{background-color:pink;}
+		.style{color:red;background-color: aqua;}
+		body{background-color:green;}
+	</style>
+</head>
+<body style="text-align: center;">
+	<h1 style="background-color:orange;">Display Effects inJquery</h1>
+
+<!--<button id="hide">hide</button> -->
+<h3>hide Effect</h3>
+<input type="button" value="hide" id="hide"  class="style">
+<p>This is Jquery display topics</p>      <br/><br/>
+
+<h3>Hide Effect and show effect</h3>
+<p1>this is Jquery display topics</p1><br/></br>
+<input type="button" value="show" id="show" class="style">
+<input type="button" value="hide" id="hide1"  class="style">
+<h3>toggle</h3>
+<p2>this is Jquery display topics</p2></br></br>
+<button id="togg"  class="style">toggle</button>
+
+<script type="text/javascript">
+	//only single property hide
+	$(document).ready(function (){
+		$("#hide").click(function(){
+			$("p").hide();
+		});
+	
+	});
+
+</script>
+<script type="text/javascript">
+
+
+//both hide and show properties
+	$(document).ready(function(){
+		$("#hide1").click(function(){
+			$("p1").hide();
+			});
+        
+        $(show).click(function(){
+        	$("p1").show();
+        });
+
+		
+	});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#togg").click(function(){
+			$("p2").toggle();
+
+		});
+	});
+</script>
+
+</body>
+</html>

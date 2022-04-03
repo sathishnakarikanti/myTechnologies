@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fade Effects in Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+	body{text-align:center;background-color: pink;}
+	h1{text-align: center;background-color: orange;}
+
+	</style>
+</head>
+<body>
+	<h1>Fade Effects in Jquery</h1>
+	
+	<p id="para2">Welcome English New Year 2021 </p>
+<input type="button" value="fadeIn" id="fadeIn" class="btn"> 
+<input type="button" value="fadeOut" id="fadeOut" class="btn">
+<p id="para1">Happy New Year</p>
+<input type="button" value="fadeToggle" id="toggle" class="btn">
+<p id="para3">Happy New Year</p>
+<p id="para4">Welcome English New Year 2021 </p>
+<p id="para5">Day's are going very fast</p>
+<input type="button" value="fadeTo" id="to" class="btn">
+<script type="text/javascript">
+	$(document).ready(function(){
+		//fadeIn
+		$("#fadeIn").click(function(){
+			$("#para2").fadeIn();
+		});
+		//fadeOut
+		$("#fadeOut").click(function(){
+			$("#para2").fadeOut();
+		});
+
+        //fadeToggle
+		$("#toggle").click(function(){
+			$("#para1").fadeToggle();
+		});
+		//fadeTo
+		$("#to").click(function(){
+			$("#para3").fadeTo("fast",0.25);
+			$("#para4").fadeTo("slow",0.5);
+			$("#para5").fadeTo("5000",0.75);
+		});
+
+
+	});
+
+</script>
+</body>
+</html>

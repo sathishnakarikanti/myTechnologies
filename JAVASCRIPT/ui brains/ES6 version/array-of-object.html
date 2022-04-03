@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array of objects</title>
+</head>
+<body>
+<script>
+	employees=[
+	{
+		name:"sathish",
+		age:29,
+		salary:"2.6LPA",
+		isActive:true
+    },
+    {
+		name:"sai",
+		age:43,
+		salary:"4.5LPA",
+		isActive:false
+    },
+    {
+		name:"saidul",
+		age:33,
+		salary:"6.6LPA",
+		isActive:false
+    },
+    {
+		name:"sathish",
+		age:25,
+		salary:"1.6LPA",
+		isActive:true
+    }]
+  
+//printing total array of object elements
+console.log(employees)
+
+
+//printing the array of object name and age using for loop
+    for(let employee of employees){
+    	console.log(`name:${employee.name}    age:${employee.age}`);
+    }
+
+//filtering (age >=30)
+ let juniorEmp=[];
+ for( let employee of employees){
+ if(employee.age <= 30){
+	juniorEmp.push(employee);
+
+ }
+ }
+console.log(juniorEmp);
+
+let seniorEmp=[];
+for(let employee of employees){
+	if(employee.age > 25){
+		seniorEmp.push(employee);
+		
+	}
+}
+console.log(seniorEmp);
+
+console.log('isActive');
+let activeEmp=[];
+for(let employee of employees){
+	if(employee.isActive){
+		activeEmp.push(employee);
+	}
+}
+console.log(activeEmp);
+  
+</script>
+</body>
+</html>

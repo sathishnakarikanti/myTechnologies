@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>delay method in Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+	.important {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+
+.important1 {
+  font-weight: bold;
+  font-size: xx-large;
+  background-color: red;
+}
+
+
+.blue {
+  color: blue;
+}
+	</style>
+</head>
+<body>
+	
+<h1>sathish</h1>
+<h2>nakarikanti</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<div>This is some important text!</div><br>
+
+<button>Add classes to elements</button>
+ 
+	
+ <script type="text/javascript">
+	$(document).ready(function(){
+  $("button").click(function(){
+    $("h1, h2, p").addClass("blue");
+    $("div").addClass("important");
+    $("div").addClass("important1");
+  });
+});
+	
+</script>
+
+</body>
+</html>

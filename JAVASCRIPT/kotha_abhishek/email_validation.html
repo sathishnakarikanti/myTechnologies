@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email validation in JS</title>
+</head>
+<body style="text-align: center;">
+<h1>Email validation JS</h1>
+<form name="myform" method="post" action="new_page1.html" onsubmit="return validateEmail()">
+	Email:<input type="Email" name="email1" placeholder="Enter your Email"></br></br>
+	<input type="submit" value="validate">
+</form>
+<script type="text/javascript">
+	function validateEmail(){
+		let email2=document.myform.email1.value;
+		let atposition=email2.indexof("@");
+		let dotposition=email2.indexof(".");
+		if(atposition<1 || dotposition<atposition+2 || dotposition+2 >=email2.length){
+			alert("please enter valid email");
+			return false;
+		}
+	}
+</script>
+</body>
+</html>

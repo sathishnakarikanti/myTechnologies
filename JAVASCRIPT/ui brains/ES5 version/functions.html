@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>functions in js</title> 
+</head>
+<body>
+	<script>
+
+		// syntax of the functions
+		//defination:Itis a block of statements which takes parameters and does some procees then returns some results.
+		//it is collection of statements and gives result.
+		//It is set of statements that gives the result.
+	function printNumbers(a,b){ //printNumbers :It is function name(as our wish). 
+		                        //a,b :Passing parameters(as our wish like x,y).
+
+
+	} 
+	printNumbers(10,20);//retuen type:Actually this is function name ,
+                   //it is must for function call,and prints the values or parameters.
+                   //RULES:
+                   //1.function declaration
+                   //2.function calling/execution
+
+     
+
+     //printing parameters
+    function printNumbers1(a,b){  //Parameters reusability
+    	let result='';
+    	console.log(a,b);
+    }
+    printNumbers1(10,20); 
+    printNumbers1(50,100);
+    printNumbers1(500,1000);
+
+     
+     //printing numbers using for loop
+    function printNumbers2(){        //isolated it does not allow the parameters and   retun but does the process.
+    	let result='';  
+        //for(intialiation condition incrimentaion/decrementation)           //printing numbers without passing.
+    	for(i=0;i<=10;i++){                                                  //using here logic.
+    		result +=` ${i} `;
+    	}
+    	console.log(result);
+    }
+    printNumbers2();  //reusability
+    printNumbers2();
+    printNumbers2();
+
+    //printing numbers differents
+    function printNumbers3(){
+    	let result='';
+    	for(i=0;i<=50;i++){
+    		result +=` ${i}`;
+    	}
+    	console.log(result);
+    }
+    printNumbers3();
+
+
+    //print end number
+    function printNumbers4(endNumber){   
+    	let result='';
+    	for(let i=0;i<=endNumber;i++){
+    		result +=` ${i} `;
+    	}
+    	console.log(result);
+    }
+     printNumbers4(30);
+     
+
+
+     //print the start number and end number
+     function printNumbers5(startNumber,endNumber){ //printing the values from starting digit to end digit
+     	let result='';
+     	for(i=startNumber;i<=endNumber;i++){
+     		result +=` ${i} `;
+     	}
+     	console.log(result);
+     }
+     printNumbers5(10,45);
+
+     //print the numbers with differences using functions
+     //for(intialiation condition incrimentaion/decrementation)
+     function printNumbers6(startNumber,endNumber){
+     	let result='';
+     	for(i=startNumber;i<=endNumber;i+=5){
+     		result +=`${i}  `;
+     	}
+     	console.log(result);
+
+     }
+     printNumbers6(0,52);
+
+     //this program is reverse printing numbers
+     //for(intialiation condition incrimentaion/decrementation)
+     function printNumbers7(startNumber,endNumber){
+        let result='';
+        for(i=startNumber;i>=endNumber;i -=4){
+            result +=` ${i} `;
+        }
+        console.log(result);
+     }
+     printNumbers7(30,1);
+
+     //printing the string 
+     
+     function printString(){
+        result='sathish';
+        console.log(result);
+
+     }
+     printString();
+
+
+     //throw the function calling and using parameters
+     function printName(name){
+       let result=` hello ${name}`;
+        console.log(result);
+
+     }
+     printName(name='sathish');
+
+     
+
+     //we have 3types of functions
+     //1.Isolated function:does not allow parameters and return type but does some some process
+     //2.type It is allows the parameters and does some process but does not allow the return type.
+     //3.Type It is allows parameters, return type and does some process.
+
+
+
+    //Isolated functions(does process only)
+    //function without parameters
+    //no return type
+    //This is normal function
+     function greet(){
+     	console.log('good morning');
+     } 
+    greet();
+
+    //function with Expression(Assining the function defination to the value of the variable is called function expression)
+    let greetMe=function(){ //new way of function declaration
+    console.log("good morning sathish")
+    }
+    greetMe();
+
+    //2.function with parameters
+    //no return type.
+    let wishMe=function(name,age){
+    let message =`hello ${name}  you are ${age} `;
+    console.log(message);
+    };
+    wishMe(name='sathish',age='21');
+
+    //function with parameters and return type
+    let sum=function(a,b){
+        let result=a+b;
+        return result;
+            };
+           let output=sum(a=10,b=20);
+           let output1=` The addition is :${output} `;
+            console.log(output1);
+
+    //multiplication using functions with return type
+    let math=function(){
+        let result=a*b;
+       return result;
+        
+        } 
+   var output2= math(a='20',b='10');
+   output3=`The multiplication is that ${output2}`;
+   console.log(output3);
+
+   //functions which takes objects as parameters and  arrays as parameters
+  
+   //function with object as paramete
+   let printObject=function(object){
+    console.log(object);
+
+   }
+   printObject(object={
+    name:'sathish',
+    age:'21',
+   });
+   let mobile={brand:'redmi',
+               color:'gold',
+               price:25000};
+   printObject(mobile);
+
+   //function with array as object
+   let printArray=function(array){
+    let result='';
+    for(let index in array){
+        result +=`Index: ${index} => VALUE: ${array[index]} \n`;
+    }
+    console.log(array)
+
+   };
+   printArray(array={10 20 30});
+  
+   let pen={colorBody:'red',
+            price:24,
+            presentationColor:'red'
+            };
+   printArray(pen);
+
+
+
+
+    
+
+
+</script>
+
+</body>
+</html>

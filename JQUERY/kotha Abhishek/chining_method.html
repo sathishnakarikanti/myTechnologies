@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>delay method in Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <button id="btn1">start</button>
+	
+ 
+	
+	<div class="div1" style="background-color: yellow; width: 300px; height: 300px;"></div></br>
+    
+	
+ <script type="text/javascript">
+	
+	$(document).ready(function(){
+	  $("#btn1").click(function(){
+	  	$(".div1").css("background-color","red").slideUp(4000).slideDown(4000);
+	  });
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number validatation in JS</title>
+</head>
+<body style="text-align: center;">
+<h1>Number Validatation in JS</h1>
+<form name="myform" action="new_page1.html" method="post" onsubmit="return validNumber()">
+	Mobile No:<input type="number" name="number1" placeholder="Enter Mobile Number" pattern="[0-9]">
+	<input type="submit" value="validate">
+</form>
+<script type="text/javascript">
+	function validNumber(){
+		let num=document.myform.number1.value;
+		
+			//if(num<5 || num>15){
+				//("Enter valid number");
+		// return false;
+		//}
+		if(num.length==10){
+	
+            return true;
+			}
+		else{
+			alert("Enter valid number");
+			return false;
+		}
+	}
+</script>
+</body>
+</html>

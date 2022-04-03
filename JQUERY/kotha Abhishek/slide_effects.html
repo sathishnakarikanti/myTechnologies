@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>slide Effects in Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+		h1{background-color: yellow;}
+		body{background-color: pink;text-align: center;}
+	    h3{background-color: orange;}
+	    .btn{background-color: red;color:white;border:3px black bold;}
+	    p1,p3{display: none;}
+
+	</style>
+</head>
+<body>
+<h1>Slide Effects in jquery</h1>
+<h3>fadeDown propertie</h3>
+<p1>Happy New English Year</p1></br></br>
+<input type="button" value="slideDown" id="down" class="btn">
+<h3>fadeUp propertie</h3>
+<p2>Thanks Welcome</p2></br></br></br></br></br></br>
+<input type="button" value="slideUp" id="up" class="btn">
+<h3>slideToggle</h3>
+<p3>And same to you!</p3></br></br>
+<input type="button" value="slideToggle" id="toggle" class="btn">
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#down").click(function(){
+			$("p1").slideDown();
+		});
+
+		$("#up").click(function(){
+			$("p2").slideUp();
+		});
+
+		$("#toggle").click(function(){
+			$("p3").slideToggle();
+		});
+	});
+</script>
+</body>
+</html>

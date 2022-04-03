@@ -1,0 +1,87 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+         
+         
+         //creation of an object in class oriented
+         console.log('opps cocept in JS');
+         class Mobile {        //creation of the class
+             constructor(brand,color,price){ //The constructor method is responsible for initialiation the values to varibales,
+                 this.brand=brand;     //variable's declarations
+                 this.color=color;
+                 this.price=price;
+             }
+             getBrand(){  //get method for collecting the assigned values .
+                 return this.brand;
+             }
+             setBrand(brand){
+                 this.brand = brand //set method for change the existed values.
+                 
+             }
+
+             getColor(){
+                 return this.color;
+             }
+
+             getPrice(price){
+                 return this.price;
+             }
+             setPrice(price){
+                 this.price = price;
+             }
+
+             printSpecification(){ //instance method(object specific method)  //this method for grouping the all the above methods to performs different functionalities
+                 let spe = `BRAND:${this.getBrand()}
+                            COLOR:${this.getColor()}
+                            Price:${this.getPrice()}`;
+                            console.log(spe);  //printing the total object
+             }
+         }
+
+         let mobile = new Mobile('Red MI','Gold',7000); //passing the parameter values  //exection start from here
+             mobile.printSpecification();//function call
+            
+            
+            mobile.setBrand('RealMe'); //updated values
+            mobile.printSpecification();
+            
+            mobile.setPrice(40000);
+            mobile.printSpecification();
+
+
+            //subclasses or inheritance concept
+            console.log('sub classes or inheritance concept');
+            class Person {
+                constructor (fisrtName,lastName){
+                    super(props);
+                    this.fisrtName = fisrtName;
+                    this.lastName = lastName;
+                }
+
+                getFirstName(){
+                    return this.fisrtName;
+                }
+
+                getLastName(){
+                    return this.lastName;
+                }
+
+                greet(){
+                    let msg = `Welcome MR:${this.fisrtName()} ${this.lastName()}`;
+                    console.og(msg);
+                }
+
+
+
+            }
+            let Person = new Person('sathish','nakarikanti');
+            Person.greet();
+        
+
+
+
+
+            </script>
+        </body>
+    </html>

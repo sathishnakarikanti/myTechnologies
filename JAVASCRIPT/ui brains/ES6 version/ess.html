@@ -1,0 +1,329 @@
+<html>
+    <head>
+        </head>
+        <body>
+            <script>
+                //ES6 futures in Javascript
+                //1.Back tick operator or template string(``)
+                //2.optional perameter
+                //3.Arrow function
+                //4.Filter Function
+                //5.Destructing method
+                //6.for of loop
+                //7.spread operator
+                
+                console.log(`ES6 futures in Javascript 
+                1.Backtick operator or template string
+                2.optional perameter
+                3.Arrow function
+                4.Filter Function
+                5.Destructive method
+                6.for of loop
+                7. spread operator
+                `);
+
+                //Template string
+                console.log(`1.Template string`);
+                
+                let student={//take a object
+                    name:'sathish',
+                    age:23,
+                    address:'india'
+                }
+                let result='';
+                //es5
+                let msg='student name:'+student.name+'         student age:'+student.age+'         student address:'+student.address;
+                //es6
+                result=`student name:${student.name} student age:${student.age} student address:${student.address}`;
+                console.log(msg);//normal print
+                console.log(result);//es6 print
+
+                //es5
+                let template=`<ul> <li> Student Name:${student.name}</li>  <li>Student age:${student.age}</li>   <li>Student address:${student.address}</li> </ul>`
+                console.log(template);
+             
+                //2.optional parameter
+                console.log('2.optional parameter');
+                
+                let message=function(name,age,msg='you can stay at India'){
+                    name = ` hai ${name},your are ${age} so ${msg}`
+                    console.log(name);
+
+                }
+                message('Dileep',25,'You have to go abroad');
+
+                let nums='';
+                 let number = function (start,end){
+                     for(i=start;i<=end;i++){
+                       nums +=`${i} `;
+                      
+                     }
+                     console.log(nums);
+                 }
+                 number(1,10)
+
+
+                // 3.Arrow funtion
+
+                //normal funtion
+                 
+                console.log('normal function');
+                result='';
+                function printNF(){
+                  let msg='';
+                  for(let i=0;i<=10;i++)  {
+                       msg += `${i} `;
+                  } 
+                  return msg;
+                }
+                result= printNF();
+                console.log(result);
+
+                
+                
+                
+                //function expression
+                console.log('function expression');
+                  result = '';
+                let printFE= function(){
+                    let msg='';
+                  for(let i=0;i<=10;i++)  {
+                       msg += `${i} `;
+                  } 
+                  return msg;
+
+                }
+                result= printFE();
+                console.log(result);
+
+
+               
+               
+               
+                //Arrow Function
+                console.log('arrow function');
+
+                let arrowF = () =>{
+                    let msg='';
+                  for(let i=0;i<=10;i++)  {
+                       msg += `${i} `;
+                  } 
+                  return msg;
+
+                }
+              result= arrowF();
+              console.log(result);
+
+
+              console.log('Usage of ARROW FUNCTION');
+              employees=[
+	{
+		name:"sathish",
+		age:29,
+		salary:"2.6LPA",
+		isActive:true
+    },
+    {
+		name:"sai",
+		age:43,
+		salary:"4.5LPA",
+		isActive:false
+    },
+    {
+		name:"saidul",
+		age:33,
+		salary:"6.6LPA",
+		isActive:false
+    },
+    {
+		name:"sathish",
+		age:25,
+		salary:"1.6LPA",
+		isActive:true
+    }]
+
+    //filtering concept
+    //filtering the junior employees
+    console.log('filtering the junior employees');
+
+    let juniorEmp = employees.filter( (employee) => {
+        return employee.age<=30;
+
+    });
+  console.log(juniorEmp);
+  
+  
+  let highSalaryEmp = employees.filter( employee => employee.salary >='3.5LPA' );
+  console.log(highSalaryEmp);
+
+  //limitations of arrow function
+  console.log('limitations of arrow function');
+
+  customer ={
+      firstName:'Sathish',
+      lastName:'Goud',
+      fullName: function(){
+          return `${this.firstName} ${this.lastName}`;
+      }
+  };
+  console.log(customer.fullName());
+
+  customer ={
+      firstName:'Sathish',
+      lastName:'Goud',
+      fullName: () => {
+          return `${customer.firstName} ${customer.lastName}`;
+      }
+  };
+  console.log(customer.fullName());
+
+  //4. for-of loop ES6
+ 
+  employees=[
+	{
+		name:"sathish",
+		age:29,
+		salary:"2.6LPA",
+		isActive:true
+    },
+    {
+		name:"sai",
+		age:43,
+		salary:"4.5LPA",
+		isActive:false
+    },
+    {
+		name:"saidul",
+		age:33,
+		salary:"6.6LPA",
+		isActive:false
+    },
+    {
+		name:"sathish",
+		age:25,
+		salary:"1.6LPA",
+		isActive:true
+    }]
+
+
+
+    console.log('for of loop');
+    //normal for loop
+    result ='';
+    for(let i=0;i<=employees.length-1;i++){
+        let employee = employees[i];
+        result +=`${employee.name.toUpperCase()}   `;
+    }
+    console.log(result);
+
+    // for in loop
+    console.log('for in loop');
+     result='';
+     for(index in employees ){
+         employee = employees[index];
+         result += `${employee.salary} `;
+     }
+     console.log(result);
+
+     //for of loop
+    console.log('for of loop');
+    result = '';
+    for (employee of employees){
+        result += `${employee.salary>'3LPA'}  ` ;
+    }
+    console.log(result);
+
+    //forEach loop ES5
+    console.log('forEach loop');
+
+    result='';
+    employees.forEach( function (employee) {
+        result += `${employee.age>25}  ` ;
+        
+    });
+    console.log(result);
+
+    //forEach loop with arrow ES6
+    result='';
+    employees.forEach(a => {
+     result += `${a.name.toUpperCase()}   `;
+    });
+    console.log(result);
+
+
+    //destructing concept ES6
+    console.log("Destructing Concept");
+
+    company={
+        brand:'TATA',
+        founder:'Ratan Tata',
+        establish:1985,
+        address:{
+            city:'Mumbai',
+            state:'Maharasta',
+            country:'India',
+            pincode:'606110'
+                 },
+        models:{
+             old:{
+                
+                oldmodels: ['Hondacity','verna','indica']
+               },
+            
+               top:{
+                
+                topmodels:['fortuner','Innova','Audi']
+            }
+    }
+
+    };
+    //destructing method
+    //accessing the data of company
+    //address
+    let data='';
+    let {state,pincode} = company.address;
+    data += `STATE:${state}  PINCODE:${pincode}`;
+    console.log(data);
+
+
+     data='';
+    let {oldmodels} = company.models.old;
+    data += `${oldmodels}`;
+    console.log(`old models:${data}`);
+    
+    data='';
+    let {topmodels} = company.models.top;
+    data += `Top models:${topmodels}`;
+    console.log(data);
+
+
+    //spread operator
+     result=[];
+    let number10 = [10,20,30,40,50,60,70,80];
+     result.push(number10);
+    console.log(...result);
+    console.log(...number10);
+    console.log(10,20,30,40,50,60,70,80);
+
+
+    //merging
+    array1=['banana','apple','gaua','mango','grapes'];
+    array2=['watermilon','phineapple','black grapes','coconut'];
+    let array3=[];
+    for(fruit of array1){
+        array3.push(fruit);
+    }
+    for(fruit of array2){
+        array3.push(fruit)
+    }
+    console.log(array3);
+
+    let  array4=[...array1,...array2];
+    console.log(array4);
+
+              
+
+
+                </script>
+            </body>
+    </html>
